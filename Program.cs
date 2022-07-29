@@ -5,10 +5,13 @@
 
 string[] stringArray = {"afaf", "003", "lolol", "-2", " ", "234"}; // согласно условию
 int maxLengthSring = 3; // согласно условию
-string[] cutArray = CutLongStr(stringArray,maxLengthSring);
+string[] cutArray = CutLongStr(stringArray,maxLengthSring); 
+
+//Метод 
 
 string[] CutLongStr(string[] array, int maxChars)
 {
+    // подсчет кол-ва эллементов соответствующих заданному условию
     int countShortStr = 0;
     for(int i = 0; i < array.Length; i++)
     {
@@ -17,7 +20,7 @@ string[] CutLongStr(string[] array, int maxChars)
             countShortStr++;
         }
     }
-
+    // создание нового массива и его возвращение
     string[] newArray = new string[countShortStr];
     if(countShortStr == 0)
     {
